@@ -1,10 +1,10 @@
-from flask import Flask
+from fastapi import FastAPI
+from app.routes.ping import router as ping_router
 
-def create_app():
-    app = Flask(__name__)
+def create_app() -> FastAPI:
+    app = FastAPI()
 
-    with app.app_context():
-        from .routes.ping import ping_bp
-        app.register_blueprint(ping_bp)
+    # Register routes
+    app.include_router(ping_router)
 
     return app

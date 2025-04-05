@@ -1,7 +1,7 @@
-from flask import Blueprint, jsonify
+from fastapi import APIRouter
 
-ping_bp = Blueprint('ping', __name__)
+router = APIRouter()
 
-@ping_bp.route('/ping', methods=['GET'])
+@router.get("/ping")
 def ping():
-    return jsonify({"message": "API is running"}), 200
+    return {"message": "pong"}
