@@ -1,4 +1,5 @@
 # ci-template
+[![Coverage Status](https://coveralls.io/repos/github/rovifran/classconnect-grupo3/ci-template/badge.svg?branch=main)](https://coveralls.io/github/rovifran/classconnect-grupo3/ci-template?branch=main)
 # How to create a venv to test
 # 1. Create a virtual environment
 ```bash
