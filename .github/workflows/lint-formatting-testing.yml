@@ -31,3 +31,11 @@ jobs:
 
       - name: Run Pylint
         run: pylint app/
+
+      - name: Run tests with coverage
+        run: pytest --cov=app --cov-report=xml
+
+      - name: Upload to Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
