@@ -7,3 +7,5 @@ disable=
 [FORMAT]
 max-line-length=88
 
+[MASTER]
+ignore=tests
