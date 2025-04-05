@@ -8,4 +8,4 @@ client = TestClient(app)
 def test_add():
     response = client.get("/add/5")
     assert response.status_code == 200
-    assert response.json() == {"result": "6"}
+    assert response.json() == {"result": 6}
